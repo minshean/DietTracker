@@ -11,6 +11,7 @@ import android.location.LocationManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.activity.result.contract.ActivityResultContracts
@@ -135,6 +136,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }
         }
 
+        val btn_maps = view.findViewById<ImageView>(R.id.buttonTabThird)
+        btn_maps.setOnClickListener(View.OnClickListener { gotoMaps("4.330436", "101.137271") })
+
         setupTabSelectedState(selectedIndex)
     }
 
@@ -220,7 +224,16 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun gotoMaps(it: Location) {
+        Log.d("GMaps", "Going to Maps");
         val intentUri = Uri.parse("geo:${it.latitude},${it.longitude}?q=restaurants")
+        val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
+        mapIntent.setPackage("com.google.android.apps.maps")
+        startActivity(mapIntent)
+    }
+
+    private fun gotoMaps(lat: String, long: String) {
+        Log.d("GMaps", "Going to Maps");
+        val intentUri = Uri.parse("geo:${lat},${long}?q=restaurants")
         val mapIntent = Intent(Intent.ACTION_VIEW, intentUri)
         mapIntent.setPackage("com.google.android.apps.maps")
         startActivity(mapIntent)
