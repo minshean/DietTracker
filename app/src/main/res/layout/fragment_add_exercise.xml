@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    tools:context=".ui.addexercise.AddExerciseFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/upper"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Exercise"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/tvName"
+            android:background="@drawable/text_field_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Exercise Name"
+            android:inputType="textPersonName"
+            android:layout_margin="16dp"/>
+
+
+        <EditText
+            android:id="@+id/tvCalories"
+            android:background="@drawable/text_field_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calories Burned"
+            android:inputType="number"
+            android:layout_margin="16dp"/>
+        <EditText
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Time"
+            android:background="@drawable/text_field_bg"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="date"
+            android:layout_margin="16dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAdd"
+            android:layout_width="150dp"
+            android:background="@drawable/blue_btn_bg"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Add"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lower"/>
+
+</LinearLayout>

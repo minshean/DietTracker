@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Diet Tracker</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorum_ipsum">Quisque sit amet sagittis erat. Duis pharetra ornare venenatis. Nulla maximus porta velit ut molestie. Proin quis convallis mauris. In facilisis justo at mi pharetra lobortis.</string>
+    <string name="dont_have_account">Don\'t have an account? <b>Sign Up</b></string>
+    <string name="under_200"><![CDATA[< 200 calories]]></string>
+    <string name="above_600"><![CDATA[> 600 calories]]></string>
+    <string name="default_notification_channel_id">food_app_notification_channel</string>
+</resources>

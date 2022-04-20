@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_bg"
+    tools:context=".ui.additem.AddItemFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/upper"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Food Item"
+            android:textAlignment="center"
+            android:textColor="@color/green_700"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/tvName"
+            android:background="@drawable/text_field_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Food Item Name"
+            android:inputType="textPersonName"
+            android:layout_margin="16dp"/>
+
+        <EditText
+            android:id="@+id/tvCalories"
+            android:background="@drawable/text_field_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calories"
+            android:inputType="number"
+            android:layout_margin="16dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAdd"
+            android:background="@drawable/blue_btn_bg"
+            android:textColor="@color/white"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Add"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDelete"
+            android:background="@drawable/blue_btn_bg"
+            android:textColor="@color/white"
+            android:layout_width="150dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:text="Delete"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lower"/>
+
+</LinearLayout>
